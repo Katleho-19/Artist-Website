@@ -1,0 +1,94 @@
+<!-- Programmer : Katleho Makhoali. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoeddyFLY | Your Cart</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="FontAwesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            <nav class="main-nav" id="mainMenu">
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="service.html">Store</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Bookings</a>
+                <a href="media.html">Media</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="View cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>3</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainMenu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <div>
+                <p class="eyebrow">Your cart</p>
+                <h1>Review your items.</h1>
+                <p>Double-check quantities before checkout.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="cart-page">
+            <div id="cart-items"></div>
+            <aside id="cart-summary" class="cart-summary"></aside>
+        </div>
+    </main>
+
+     <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+               <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Dashboard</a>
+                <a href="service.html">Merch</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Bookings</a>
+                <a href="media.html">Media</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Bookings</h3>
+                <p><i class="fas fa-phone-alt"></i> 0839954258</p>
+                <p><i class="fas fa-envelope"></i> flyjoeddykatleho@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Welkom, Free State</p>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Katleho Makhoali & Kamohelo Molamo. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const siteNav = document.querySelector('.main-nav');
+        menuToggle?.addEventListener('click', () => {
+            const isOpen = siteNav?.classList.toggle('nav-open');
+            menuToggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const icon = menuToggle?.querySelector('i');
+            icon?.classList.toggle('fa-bars');
+            icon?.classList.toggle('fa-times');
+        });
+    </script>
+    <script src="cart.js"></script>
+</body>
+</html>

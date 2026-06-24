@@ -1,0 +1,280 @@
+﻿
+<!-- Programmers : Kamohelo Molamo & Katleho Makhoali -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist | Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="FontAwesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            <nav class="main-nav" id="mainMenu">
+                <a href="index.html" class="active">Dashboard</a>
+                <a href="service.html">Store</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Bookings</a>
+                <a href="media.html">Media</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="View cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>3</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainMenu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Latest Release</p>
+                <h1>Discover Latest Releases</h1>
+                <P>Stream the latest tracks and explore new music collection.</P>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3YJRK9lepNwIzGUiPbogWr?utm_source=generator&si=f652cc1cce8d4e51" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                <p>New music is available now! - Tap in</p>
+                <a href="https://open.spotify.com/album/3YJRK9lepNwIzGUiPbogWr?si=PjI87cMSTGuWsHMf0vVCNg" target="_blank" class="btn btn-primary">Stream on Spotify</a>
+            </div>
+            <div class="hero-media">
+                <img src="images/tracklist.png" alt="tracklist">
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-categories">
+        <div class="container">
+            <h2>Popular releases</h2>
+            <div class="grid categories-grid">
+                <article class="category-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/190hmqGbnjqvpiJqZ2Ye5i?utm_source=generator&si=792e98535dab4386" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <h3>I Am Him</h3>
+                </article>
+                <article class="category-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5Q1YuwEKshNBfkGErIZcIU?utm_source=generator&si=f1379cfefe794d37" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <h3>Literature(ft. Slayer Raps)</h3>
+                </article>
+                <article class="category-card">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/track/5vQiiKT11xmITNQYFPVi0K?utm_source=generator&si=a0dfb3d5fa32440e" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <h3>Be the Man</h3>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-categories">
+        <div class="container">
+             <h2>Shorts</h2>
+            <div class="grid categories-grid">
+                <article class="category-card">
+                    <iframe src="https://www.youtube.com/embed/h2CxPuqHNho"  width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    <h3>I Am Him Visualizer</h3>
+                </article>
+                <article class="category-card">
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1587669232265804%2F&show_text=false&width=267&t=0" width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    <h3>Just a freestyle</h3>
+                </article>
+                <article class="category-card">
+                    <div class="video-embed-shorts">
+                       <iframe src="https://www.youtube.com/embed/bsusqVlAEsE"  width="267" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+                    </div>
+                    <h3>Youtube snippet</h3>
+                </article>
+            </div>
+            <a href="media.html" class="btn btn-primary">View Media</a>
+        </div>
+    </section>
+
+    <section class="featured-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Merchandise</h2>
+                <p>Limited edition drops. Pick your size, add to cart, and represent.</p>
+                <a href="service.html" class="text-link">Visit Store</a>
+            </div>
+
+            
+            <div class="grid product-grid">
+                Merchandise is currently unavailable. Please check back later for new drops.
+                <!---
+                <article class="product-card">
+                    <img src="images/scheezy_hood.png" alt="Hoodie">
+                    <div class="product-card-body">
+                        <h3>Scheezy Hoodie</h3>
+                        <p class="price">R120.00</p>
+                        
+                        <label for="size">Size</label>
+                          <select id="size" name="size">
+                           <option value="">Select size</option>
+                           <option value="S">S</option>
+                           <option value="M">M</option>
+                           <option value="L">L</option>
+                           <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                          </select>
+                    
+                        <a href="#" class="btn btn-secondary add-to-cart" data-id="p1" data-name="Scheezy Hoodie" data-price="120.00" data-image="images/scheezy_hood.png">Add to cart</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/teezy_t-shirt.png" alt="Tee">
+                    <div class="product-card-body">
+                        <h3>Knock Hard T-Shirt</h3>
+                        <p class="price">R80.00</p>
+                       <label for="size">Size</label>
+                         <select id="size" name="size">
+                          <option value="">Select size</option>
+                          <option value="S">S</option>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                         </select>
+                        <a href="#" class="btn btn-secondary add-to-cart" data-id="p2" data-name="Knock Hard T-Shirt" data-price="80.00" data-image="images/teezy_t-shirt.png">Add to cart</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="images/swat hat.png" alt="SWAT Hat">
+                    <div class="product-card-body">
+                        <h3>SWAT Hat</h3>
+                        <p class="price">R80.00</p>
+                       <label for="size">Size</label>
+                         <select id="size" name="size">
+                           <option value="">Select size</option>
+                           <option value="S">S</option>
+                           <option value="M">M</option>
+                           <option value="L">L</option>
+                           <option value="XL">XL</option>
+                           <option value="XXL">XXL</option>
+                         </select>
+                        <a href="#" class="btn btn-secondary add-to-cart" data-id="p3" data-name="SWAT Hat" data-price="80.00" data-image="images/swat hat.png">Add to cart</a>
+                    </div>
+                </article>
+            -->
+            </div>
+    
+        </div>
+    </section>
+    
+<!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Connect With Me</h2>
+        <p>Follow me on social media or send me a message.</p>
+        
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=100083340482604" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.youtube.com/@flyjoeddy" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/joeddy_be_humble/#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://open.spotify.com/artist/1kd4k1PT0NOJ9dFA3iZtK6?si=lDYcTHaaQb6Iflafh3aH7g" target="_blank"><i class="fab fa-spotify"></i></a>
+        </div>
+        
+        <a href="mailto:flyjoeddykatleho@gmail.com" class="btn-primary">Send a Message</a>
+    </div>
+</section>
+
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+               <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Dashboard</a>
+                <a href="service.html">Merch</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Bookings</a>
+                <a href="media.html">Media</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Bookings</h3>
+                <p><i class="fas fa-phone-alt"></i> 0839954258</p>
+                <p><i class="fas fa-envelope"></i> flyjoeddykatleho@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Welkom, Free State</p>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Katleho Makhoali & Kamohelo Molamo. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript for mobile menu toggle and cart functionality -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const siteNav = document.querySelector('.main-nav');
+        menuToggle?.addEventListener('click', () => {
+            const isOpen = siteNav?.classList.toggle('nav-open');
+            menuToggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const icon = menuToggle?.querySelector('i');
+            icon?.classList.toggle('fa-bars');
+            icon?.classList.toggle('fa-times');
+        });
+    </script>
+    <script src="cart.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("0Rbui6W3XdClns3iS");
+
+  document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = document.getElementById('newsletterEmail').value;
+    const msg = document.getElementById('newsletterMsg');
+    const btn = e.target.querySelector('button');
+    const googleForm = document.getElementById('newsletterForm');
+
+    btn.disabled = true;
+    btn.textContent = 'Subscribing...';
+    const data = new URLSearchParams();
+    data.append('entry.1907364484', email);
+  fetch(
+  'https://docs.google.com/forms/d/e/1FAIpQLSfxpsiZypjTJvvOug3ElIf96vwT9EsQIRZmEV-uOOFBtwgRuA/formResponse',
+  {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: data
+  }
+);
+
+    emailjs.send("service_7e4bvrj", "template_2j3i30s", {
+      subject: " New Newsletter Subscriber",
+      message: "Someone just subscribed to your mailing list: " + email,
+      fan_email: email,
+      to_email: "flyjoeddykatleho@gmail.com"
+    })
+    .then(() => {
+      msg.textContent = "You're in! Watch your inbox for new drops.";
+      msg.style.color = '#1db954';
+      googleForm.reset();
+    })
+    .catch((err) => {
+      msg.textContent = "Something went wrong — please try again.";
+      msg.style.color = '#e91e8c';
+      console.error(err);
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = 'Subscribe';
+    });
+  });
+</script>
+</body>
+</html>
+

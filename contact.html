@@ -1,0 +1,154 @@
+﻿<!-- Programmers : Kamohelo Molamo & Katleho Makhoali -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />   
+    <title>JoeddyFLY | Boookings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="FontAwesome/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="emailjs-config.js"></script>
+</head>
+<body>
+       <header class="site-header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            <nav class="main-nav" id="mainMenu">
+                <a href="index.html">Dashboard</a>
+                <a href="service.html">Store</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="active">Bookings</a>
+                <a href="media.html">Media</a>
+            </nav>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-link" aria-label="View cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>3</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-controls="mainMenu" aria-expanded="false">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero page-hero-small">
+        <div class="container page-hero-inner">
+            <div>
+                <p class="eyebrow">Contact</p>
+                <h1>Have enquiries or order request?</h1>
+                <p>Send us a message and we’ll reply as soon as possible.</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="container contact-page">
+        <section class="contact-grid">
+            <div class="contact-info">
+                <h2>Contact details</h2>
+                <p><i class="fas fa-phone-alt"></i> 0839954258</p>
+                <p><i class="fas fa-envelope"></i> flyjoeddykatleho@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 22256 Militus Street, Welkom, Free State</p>
+                <h2>Bookings & Enquiries</h2>
+                 <p>For live shows, collaborations, or press enquiries, please reach out via the form beside or email me directly at @flyjoeddykatleho@gmail.com.</p>
+                <p>We’re here to help with questions about ,products, shipping, and returns.</p>
+            </div>
+            <div class="contact-form-card">
+                <h2>Send a message</h2>
+                <form id="contact-form" action="#" method="post" class="contact-form">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <p id="contact-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+               <a href="index.html" class="logo-link">
+                <img src="images/JoeddyFLY.jpeg" alt="JoeddyFLY image" class="logo">
+                <span class="artist-name"><strong>JoeddyFLY</strong></span>
+            </a>
+            </div>
+            <div class="footer-links">
+                <h3>Quick links</h3>
+                <a href="index.html">Dashboard</a>
+                <a href="service.html">Merch</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Bookings</a>
+                <a href="media.html">Media</a>
+            </div>
+            <div class="footer-contact">
+                <h3>Bookings</h3>
+                <p><i class="fas fa-phone-alt"></i> 0839954258</p>
+                <p><i class="fas fa-envelope"></i> flyjoeddykatleho@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Welkom, Free State</p>
+            </div>
+        </div>
+        <p class="footer-copy">&copy; 2026 Katleho Makhoali & Kamohelo Molamo. All rights reserved.</p>
+    </footer>
+    <!-- JavaScript for mobile menu toggle and contact form submission -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const siteNav = document.querySelector('.main-nav');
+        menuToggle?.addEventListener('click', () => {
+            const isOpen = siteNav?.classList.toggle('nav-open');
+            menuToggle?.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+            const icon = menuToggle?.querySelector('i');
+            icon?.classList.toggle('fa-bars');
+            icon?.classList.toggle('fa-times');
+        });
+    </script>
+    <script>
+        emailjs.init({ publicKey: EMAILJS_CONFIG.PUBLIC_KEY });
+
+        const contactForm = document.getElementById('contact-form');
+        const contactStatus = document.getElementById('contact-status');
+
+        contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const params = {
+                from_name: document.getElementById('name').value,
+                from_email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                to_email: EMAILJS_CONFIG.BUSINESS_EMAIL
+            };
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            contactStatus.textContent = 'Sending...';
+
+            emailjs.send(EMAILJS_CONFIG.SERVICE_ID, EMAILJS_CONFIG.CONTACT_TEMPLATE_ID, params)
+                .then(() => {
+                    contactStatus.textContent = "Thanks! Your message has been sent — we'll reply soon.";
+                    contactStatus.classList.add('success');
+                    contactForm.reset();
+                })
+                .catch((err) => {
+                    console.error(err);
+                    contactStatus.textContent = "Sorry, something went wrong sending your message. Please try again or call us.";
+                    contactStatus.classList.add('error');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+    <script src="cart.js"></script>
+</body>
+</html>
+
